@@ -1,10 +1,3 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
@@ -32,12 +25,18 @@ function SEO({ description, lang, meta, title }) {
       htmlAttributes={{
         lang,
       }}
+      script={[
+        {
+          src: `https://kit.fontawesome.com/03740744c9.js`,
+          crossOrigin: `anonymous`,
+        },
+      ]}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,
-          content: metaDescription,
+          content: `This is gatsby crash course by brad traversy`,
         },
         {
           property: `og:title`,
